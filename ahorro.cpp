@@ -11,7 +11,7 @@ struct Categoria {
 };
 
 void mostrarTabla(const Categoria categorias[], int numCategorias, double ingresoTotal) {
-	cout << "\nDistribución del Ingreso Mensual:\n";
+	cout << "\nDistribución del Ingreso Mensual de Emiliano:\n"; //de Emiliano
 	cout << "-------------------------------------------\n";
 	cout << left << setw(25) << "Categoría" 
 		<< setw(15) << "Porcentaje" 
