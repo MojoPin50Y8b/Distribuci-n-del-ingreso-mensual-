@@ -12,21 +12,21 @@ struct Categoria {
 
 void mostrarTabla(const Categoria categorias[], int numCategorias, double ingresoTotal) {
 	cout << "\nDistribución del Ingreso Mensual:\n";
-	cout << "---------------------------------\n";
+	cout << "-------------------------------------------\n";
 	cout << left << setw(25) << "Categoría" 
 		<< setw(15) << "Porcentaje" 
-		<< setw(15) << "Cantidad" << endl;
-	cout << "---------------------------------\n";
+		<< "Cantidad" << endl;
+	cout << "-------------------------------------------\n";
 	
 	for (int i = 0; i < numCategorias; ++i) {
 		cout << left << setw(25) << categorias[i].nombre
-			<< fixed << setprecision(2) << setw(15) << categorias[i].porcentaje << "% "
+			<< right << setw(10) << fixed << setprecision(2) << categorias[i].porcentaje << "% "
 			<< "$" << fixed << setprecision(2) << categorias[i].cantidad << endl;
 	}
 	
-	cout << "---------------------------------\n";
+	cout << "-------------------------------------------\n";
 	cout << left << setw(25) << "Total"
-		<< setw(15) << "100.00%"
+		<< right << setw(10) << "100.00% "
 		<< "$" << fixed << setprecision(2) << ingresoTotal << endl;
 }
 
