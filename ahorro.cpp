@@ -20,13 +20,13 @@ void mostrarTabla(const Categoria categorias[], int numCategorias, double ingres
 	
 	for (int i = 0; i < numCategorias; ++i) {
 		cout << left << setw(25) << categorias[i].nombre
-			<< setw(15) << to_string(categorias[i].porcentaje) + "%"
+			<< fixed << setprecision(2) << setw(15) << categorias[i].porcentaje << "% "
 			<< "$" << fixed << setprecision(2) << categorias[i].cantidad << endl;
 	}
 	
 	cout << "---------------------------------\n";
 	cout << left << setw(25) << "Total"
-		<< setw(15) << "100%"
+		<< setw(15) << "100.00%"
 		<< "$" << fixed << setprecision(2) << ingresoTotal << endl;
 }
 
@@ -39,10 +39,10 @@ int main() {
 	
 	const int numCategorias = 4;
 	Categoria categorias[numCategorias] = {
-		{"Gastos esenciales", 50, ingresoMensual * 0.50},
-	{"Objetivos financieros", 15, ingresoMensual * 0.15},
-		{"Gastos discrecionales", 25, ingresoMensual * 0.25},
-	{"Ahorro", 10, ingresoMensual * 0.10}
+		{"Gastos esenciales", 50.00, ingresoMensual * 0.50},
+	{"Objetivos financieros", 15.00, ingresoMensual * 0.15},
+		{"Gastos discrecionales", 25.00, ingresoMensual * 0.25},
+	{"Ahorro", 10.00, ingresoMensual * 0.10}
 	};
 	
 	mostrarTabla(categorias, numCategorias, ingresoMensual);
